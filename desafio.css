@@ -1,0 +1,124 @@
+
+/* TAGS */
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(228, 228, 228);
+}
+
+button {
+    border: none;
+    background-color: rgb(52, 199, 76);
+    width: 50%;
+
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+
+
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.534);
+
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+
+    transition: 0.5s;
+
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.534);
+}
+
+table{
+    width: 100%;
+    text-align: center;
+
+}
+
+td{
+    border: 1px solid black;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 5px;
+    width: 25%;
+}
+
+
+/* CLASS */
+
+.person div{
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 10px;
+}
+
+.centralizar {
+
+    color: rgba(0, 0, 0, 0.8);
+
+    padding-top: 5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    background-color: white;
+
+
+    border-radius: 10px;
+    padding: 20px;
+    width: 75%;
+    margin-top: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.534);
+    cursor: default;
+
+    font-size: 12px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.input {
+    width: 90%;
+    background-color: rgb(206, 206, 206);
+    padding: 10px;
+    margin-top: 10px;
+}
+
+input[type=number], input[type=text] {
+
+    width: 100%;
+    border: none;
+    background-color: rgb(206, 206, 206);
+    outline: none;
+
+}
+
+
+/* ANIMAÇÕES */
+
+.loader {
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+

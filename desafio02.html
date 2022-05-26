@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="desafio.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="persona" class="centralizar "  >
+
+        <div class="card">
+            <h2 id="">Bem vindo!</h2>
+        </div>
+
+        <div class="card">
+            <h2>Preenche seus dados abaixo</h2>
+
+            <div class="input">
+                <input type="text" id="name" placeholder="Qual seu nome?">
+            </div>
+            <small id="nameError" style="color: red"></small>
+
+            <div class="input">
+                <input type="radio" name="gender" value="masculino"> Masculino
+                <input type="radio" name="gender" value="feminino"> Feminino
+            </div>
+            <small id="genderError" style=" color: red"></small>
+
+            <div class="input">
+                <input type="number" id="age" placeholder="Qual sua idade?">
+            </div>
+            <small id="ageError" style=" color: red"></small>
+
+            <div class="input">
+                <input type="text" id="income"  placeholder="Qual sua renda mensal média">
+            </div>
+            <small id="incomeError" style="color: red"></small>
+
+
+        </div>
+
+        <button onclick="person()">FAZER SIMULADO</button>
+
+
+
+    </div>
+
+    <div id="quiz" class="centralizar" style="display:none; ">
+        <div class="card">
+
+            <div class="title">Você tem formação na área financeira?</div>
+            <small id="question01Error" style="color: red"></small>
+            <hr>
+
+            <input type="radio" name="question01" id="" value='1A'> Sim, sem experiência <br>
+            <input type="radio" name="question01" id="" value="1B"> Sim, com experiência <br>
+            <input type="radio" name="question01" id="" value="1C"> Não, mas tenho experiência <br>
+            <input type="radio" name="question01" id="" value="1D"> Não, com pouca experiência <br>
+            <input type="radio" name="question01" id="" value="1E"> Não, e não tenho experiência <br>
+
+        </div>
+
+        <div class="card">
+
+            <div class="title"> Qual produto você conhece?</div>
+            <small id="question02Error" style="color: red"></small>
+            <hr>
+            <input type="radio" name="question02" id="" value='2A'> Poupança, depósito a prazo <br>
+            <input type="radio" name="question02" id="" value="2B"> Tesouro Direto, renda variável <br>
+            <input type="radio" name="question02" id="" value="2C"> Produtos 1 e 2 <br>
+            <input type="radio" name="question02" id="" value="2D"> Nunca investiu, mas conheço alguns produtos <br>
+            <input type="radio" name="question02" id="" value="2E">Nunca investi e não conheço nenhum <br>
+
+
+
+        </div>
+
+        <button onclick="profileAnalysis()">RESULTADO</button>
+
+
+    </div>
+
+    <div id="variavel" class="centralizar" style="display:none ;">
+
+        <div class="card">
+            <h2 id="variavelTitle" ></h2>
+        </div>
+
+        <div class="card">
+            <h2>Investimentos em Renda Variavel é ideal! Faça uma simulação abaixo:</h2>
+
+            <div class="input">
+                <input type="number" id="compra" placeholder="Quanto valia uma ação no momento da compra?">
+            </div>
+            <small id="compraError" style="color: red"></small>
+
+            <div class="input">
+                <input type="number" id="venda" placeholder="Quanto vale essa mesma ação nos dias atuais?">
+            </div>
+            <small id="vendaError" style="color: red"></small>
+
+            <div class="input">
+                <input type="number" id="ações" placeholder="Quanto dessas ações você comprou ou pretende comprar?">
+            </div>
+            <small id="açõesError" style="color: red"></small>
+
+        </div>
+
+        
+
+
+
+    </div>
+
+    <div id="fixo" class="centralizar " style="display:none ;" >
+
+        <div class="card">
+            <h2 id="fixoTitle"></h2>
+        </div>
+
+        <div class="card">
+            <h2>Investimento em Renda Fixa Poupança é ideal! Faça uma simulação abaixo:</h2>
+
+            <div class="input">
+                <input type="number" id="capital" placeholder="Qual valor que deseja investir?">
+            
+            </div>
+            <small id="capitalError" style="color: red"></small>
+
+            <div class="input ">
+                <input type="number" id="juros" placeholder="Qual juros( % a.a )">
+                <small>Ex: Rendimento do CDI de 2010 a 2021 é 8,76% a.a </small>
+            </div>
+            <small id="jurosError" style="color: red"></small>
+
+            <div class="input">
+                <input type="number" id="tempo" placeholder="Quantos meses pretende deixar rendendo?">
+                
+            </div>
+            <small id="tempoError" style="color: red"></small>
+
+            <div class="input">
+                <input type="number" id="inflação" placeholder="Qual é a inflação acumulada nesse periodo(%)">
+                <small>Ex: Inflação acumulado de 2010 a 2021 é de 73,12%</small>
+            </div>
+            <small id="inflaçãoError" style="color: red"></small>
+
+        </div>
+
+
+        
+
+
+
+    </div>
+
+    <div id="resultado" class="centralizar" style="display:none ;"  >
+
+        
+        <div class="card person" id="card-person">
+            <div> Nome: Iago Faria de Souza </div>
+            <div> Sexo: Masculino </div>
+            <div> Idade: 24 Anos </div>
+            <div> Renda: R$ 6000 </div>
+         </div>
+
+        <div class="card">
+           <table>
+            <tr id="tableThInfo">
+                <th> Capital Investido </th>
+                <th> Juros a.a </th>
+                <th> Periodo </th>
+                <th> Inflação acumulada do periodo</th>
+            </tr>
+
+
+            <tr id="tableTdInfo"> 
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+
+           </table>
+        </div>
+
+        <div class="card">
+            <table>
+             <tr id="tableTh" >
+                 <th> Retorno com juros simples </th>
+                 <th> Retorno com juros Composto </th>
+                 <th> Valor perdido com a inflação </th>
+                 <th> Rentabilidade real com a inflação</th>
+             </tr>
+ 
+ 
+             <tr id="tableTd"> 
+                 <td>R$ </td>
+                 <td>R$ </td>
+                 <td>R$ </td>
+                 <td>R$ </td>
+             </tr>
+ 
+            </table>
+         </div>
+
+         <button onclick="reset()">REFAZER TESTE</button>
+        
+
+
+
+    </div>
+
+    <div id="loading" class="centralizar" style="display:none ;">
+
+        <div class="card" style="display: flex; justify-content: center; padding: 40px;">
+            <div class="loader"></div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <script src="./desafio.js"></script>
+</body>
+
+</html>
